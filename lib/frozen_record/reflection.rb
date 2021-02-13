@@ -71,10 +71,6 @@ module FrozenRecord::Reflection
       association_reflections
     end
 
-    def reflect_on_association(association)
-      reflections[association.to_s]
-    end
-
     def belongs_to_frozen(name, **options)
       reflection = FrozenRecord::Reflection.create(:belongs_to, name, nil, options, self)
       FrozenRecord::Reflection.add_reflection(self, name, reflection)
