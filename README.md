@@ -186,7 +186,7 @@ The `belongs_to_frozen` association supports these options:
 
 #### :class_name
 
-If the name of the other model cannot be derived from the association name, you can use the :class_name option to supply the model name.
+If the name of the FrozenRecord model cannot be derived from the association name, you can use the :class_name option to supply the model name.
 
 #### :foreign_key
 
@@ -208,7 +208,7 @@ class Book < ApplicationRecord
 end
 ```
 
-By default, the Book model would be expected to respond to `#genre_ids` with an array of values that matche Author records' `#id` attribute.
+By default, the Book model would be expected to respond to `#genre_ids` with an array of values that match Author records' `#id` attribute.
 
 The `belongs_to_many_frozen` association supports the same options as `belongs_to_frozen`.
 

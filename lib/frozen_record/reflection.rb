@@ -131,7 +131,7 @@ module FrozenRecord::Reflection
           raise ArgumentError, <<-MSG.squish
             Couldn't find a valid model for frozen #{name} association.
             Please provide the :class_name option on the association declaration.
-            If :class_name is already provided make sure is a FrozenRecord::Base subclass.
+            If :class_name is already provided make sure it is a FrozenRecord::Base subclass.
           MSG
         end
       end
@@ -154,7 +154,7 @@ module FrozenRecord::Reflection
       unless active_record_defines? foreign_key
         raise ArgumentError, <<-MSG.squish
           Couldn't determine foreign key for frozen #{name} association.
-          Please provide the :primary_key option on the association declaration
+          Please provide the :foreign_key option on the association declaration
           or define #{class_name}##{foreign_key}.
         MSG
       end
